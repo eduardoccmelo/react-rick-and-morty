@@ -1,8 +1,183 @@
-.App {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  color: #04b1c5;
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
   background-color: #111440;
-  font-size: 2em;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 80px 1fr 1px;
+  grid-template-columns: 1fr;
+  color: #04b1c5;
+  position: relative;
+}
+
+.App > header {
+  grid-row: 1 / 2;
+}
+
+.App > main {
+  grid-row: 2 / 3;
+}
+
+.App > footer {
+  grid-row: 3 / 4;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  /* position: relative; */
+  top: 0;
+  z-index: 100;
+  background-color: black;
+}
+.main {
+  display: grid;
+  overflow-y: scroll;
+  text-align: justify;
+  overflow: hidden;
+  z-index: 99;
+  padding-bottom: 30px;
+}
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: black;
+}
+
+.homeImg {
+  position: absolute;
+  top: -138px;
+  align-self: center;
+  justify-self: center;
+  max-height: 940px;
+}
+
+.characterDetails {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.filterInputs {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+}
+
+.filterInputs input {
+  width: 200px;
+  height: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.filterInputs select {
+  margin-left: 10px;
+  height: 25px;
+}
+
+.characterDetails button {
+  margin-top: 10px;
+  align-self: center;
+  width: 100px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navImg {
+  width: 130px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  padding: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.characterList {
+  display: grid;
+}
+
+.loadMoreDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.loadMoreButton {
+  height: 40px;
+  justify-self: center;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 120px;
+  border: 1px solid black;
+}
+
+.characterCard {
+  background-color: rgb(93, 180, 0);
+  border: darkgreen 1px solid;
+  border-radius: 0 50px 50px 0;
+  color: black;
+  margin: 5px;
+  width: 400px;
+  display: flex;
+  text-align: start;
+  font-size: 22px;
+  position: relative;
+}
+
+.cardTitle {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.cardImg {
+  margin: 5px;
+  width: 60px;
+  border: black 1px solid;
+}
+
+.cardButton {
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: rgb(0, 44, 0);
+  color: white;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  /* .homeImg {
+    width: 1400px;
+  } */
 }

@@ -1,49 +1,25 @@
-// import { useState } from "react";
+export default function Filter({ onFilterName, onFilterStatus }) {
+  function handleOnStatus(event) {
+    const inputValue = event.target.value;
+    onFilterStatus(inputValue);
+  }
 
-// export default function Filters({ onStatusFilterChange, onNameFilterChange }) {
-//   const [nameFilter, setNameFilter] = useState();
-//   const [statusFilter, setStatusFilter] = useState();
+  function handleOnName(event) {
+    const inputValue = event.target.value;
+    onFilterName(inputValue);
+  }
 
-//   if (nameFilter) {
-//     url = `https://rickandmortyapi.com/api/character?name=${nameFilter}&status=${statusFilter}`;
-//   }
-
-//   if (statusFilter) {
-//     url = `https://rickandmortyapi.com/api/character?name=${nameFilter}&status=${statusFilter}`;
-//   }
-
-//   function handleOnChangeInput(event) {
-//     const inputElement = event.target;
-//     setNameFilter(inputElement.value);
-//     console.log(event.target.value);
-//   }
-
-//   function handleOnClickSelectInput(event) {
-//     const inputValue = event.target.value;
-//     if (inputValue === "alive") {
-//       setStatusFilter("alive");
-//     } else if (inputValue === "dead") {
-//       setStatusFilter("dead");
-//     } else if (inputValue === "unknown") {
-//       setStatusFilter("unknown");
-//     } else if (inputValue === "all") {
-//       setStatusFilter("");
-//     }
-//     console.log(event.target.value);
-//   }
-
-//   return (
-//     <form className="filterInputs">
-//       <input
-//         onChange={handleOnChangeInput}
-//         placeholder="Name of the character"
-//       ></input>
-//       <select onClick={handleOnClickSelectInput}>
-//         <option>All</option>
-//         <option>Alive</option>
-//         <option>Dead</option>
-//         <option>Unknown</option>
-//       </select>
-//     </form>
-//   );
-// }
+  return (
+    <div className="Filter">
+      <form className="filterInputs">
+        <input onChange={handleOnName} placeholder=" Name of the character" />
+        <select onClick={handleOnStatus}>
+          <option value="all">All</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
+          <option value="unknown">Unknown</option>
+        </select>
+      </form>
+    </div>
+  );
+}

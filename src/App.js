@@ -19,12 +19,14 @@ function App() {
             <img
               className="navImg"
               alt="navImg"
-              src="https://hbomax-images.warnermediacdn.com/images/GXkRjxwjR68PDwwEAABKJ/tileburnedin?size=1280x720&format=jpeg&partner=hbomaxcom&productCode=hbomax&host=artist.api.cdn.hbo.com&w=480"
+              src="https://i.kym-cdn.com/photos/images/original/001/277/665/eaa.jpg"
             ></img>
-            <NavLink exact to="/">
-              Home
-            </NavLink>
-            <NavLink to="/charactersList">Characters List</NavLink>
+            <div className="navLinks">
+              <NavLink exact to="/">
+                Home
+              </NavLink>
+              <NavLink to="/charactersList">Characters List</NavLink>
+            </div>
           </nav>
         </header>
         <main className="main">
@@ -43,7 +45,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer className="footer">Footer</footer>
+        <footer className="footer">Rick and Morty API Project @ 2021</footer>
       </div>
     </Router>
   );

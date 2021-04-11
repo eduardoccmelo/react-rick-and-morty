@@ -1,8 +1,16 @@
 // import { useState } from "react";
 
-// export default function Filters() {
+// export default function Filters({ onStatusFilterChange, onNameFilterChange }) {
 //   const [nameFilter, setNameFilter] = useState();
 //   const [statusFilter, setStatusFilter] = useState();
+
+//   if (nameFilter) {
+//     url = `https://rickandmortyapi.com/api/character?name=${nameFilter}&status=${statusFilter}`;
+//   }
+
+//   if (statusFilter) {
+//     url = `https://rickandmortyapi.com/api/character?name=${nameFilter}&status=${statusFilter}`;
+//   }
 
 //   function handleOnChangeInput(event) {
 //     const inputElement = event.target;

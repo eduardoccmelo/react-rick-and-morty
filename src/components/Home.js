@@ -3,7 +3,7 @@ export default function Home() {
     <img
       className="homeImg"
       alt="homeImg"
-      src="https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg"
+      src="https://i.pinimg.com/736x/bd/65/b7/bd65b7392a25c6be95458577d4e3c112.jpg"
     ></img>
   );
 }

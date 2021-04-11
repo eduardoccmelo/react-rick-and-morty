@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #111440;
+  background-color: black;
 }
 
 .App {
@@ -37,8 +37,17 @@ footer {
   /* align-items: center; */
 }
 
+.navLinks {
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  position: absolute;
+  right: 10px;
+}
+
 .header {
   width: 100%;
+  height: 80px;
   position: fixed;
   /* position: relative; */
   top: 0;
@@ -59,20 +68,66 @@ footer {
   bottom: 0;
   z-index: 100;
   background-color: black;
+  color: rgb(93, 180, 0);
 }
 
 .homeImg {
   position: absolute;
-  top: -138px;
+  top: -200px;
   align-self: center;
   justify-self: center;
-  max-height: 940px;
+  position: fixed;
+  /* max-height: 1000px; */
 }
 
 .characterDetails {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
+  background-color: rgb(93, 180, 0);
+  color: black;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1em;
+  border: black 1px solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.characterDetails p {
+  margin-top: 5px;
+}
+
+.characterDetails button {
+  height: 30px;
+  border: black 1px solid;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.titleDetail {
+  text-transform: uppercase;
+  background-color: rgb(31, 59, 3);
+  color: rgb(155, 209, 101);
+  border: black 1px solid;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.textDetail {
+  text-transform: uppercase;
+  background-color: chartreuse;
+  border: black 1px solid;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.imgDetailCard {
+  width: 350px;
+  align-self: center;
+  border: black 1px solid;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 10px;
 }
 
 .filterInputs {
@@ -106,6 +161,9 @@ button {
 
 .navImg {
   width: 130px;
+  position: absolute;
+  left: 0;
+  top: 5px;
 }
 
 .nav {
@@ -117,11 +175,12 @@ button {
   padding: 0 15px;
   font-size: 24px;
   text-decoration: none;
-  color: white;
+  color: rgb(93, 180, 0);
 }
 
 .characterList {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .loadMoreDiv {
@@ -135,7 +194,10 @@ button {
   margin-top: 5px;
   border-radius: 10px;
   width: 120px;
-  border: 1px solid black;
+  border: 1px solid rgb(114, 114, 114);
+  background-color: rgb(0, 44, 0);
+  color: white;
+  font-size: 1em;
 }
 
 .characterCard {
@@ -176,8 +238,53 @@ button {
   top: 10px;
 }
 
-@media only screen and (min-width: 400px) {
-  /* .homeImg {
-    width: 1400px;
-  } */
+.cardButton:hover,
+.loadMoreButton:hover {
+  background-color: rgb(2, 20, 2);
+}
+
+@media only screen and (max-width: 1250px) {
+  .characterCard {
+    width: 340px;
+  }
+  .cardTitle {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .characterCard {
+    width: 320px;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1015px) {
+  .characterList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .homeImg {
+    position: absolute;
+    top: 170px;
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    max-width: 300px;
+  }
+  .characterList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .characterCard {
+    width: 300px;
+  }
+  .cardTitle {
+    font-size: 12px;
+    font-weight: 700;
+  }
 }

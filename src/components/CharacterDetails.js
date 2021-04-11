@@ -18,11 +18,33 @@ export default function CharacterDetails() {
 
   return (
     <div className="characterDetails">
-      <img src={character.image} alt={character.image}></img>
-      <p>Name: {character.name}</p>
-      <p>Status: {character.status}</p>
-      <p>Gender: {character.gender}</p>
-      {character.type !== "" && <p>Type: {character.type}</p>}
+      <img
+        className="imgDetailCard"
+        src={character.image}
+        alt={character.image}
+      ></img>
+      <p>
+        <span className="titleDetail">Name</span>
+        <span className="textDetail">{character.name}</span>
+      </p>
+      <p>
+        <span className="titleDetail">Gender</span>
+        <span className="textDetail">{character.gender}</span>
+      </p>
+      <p>
+        <span className="titleDetail">Status</span>
+        <span className="textDetail">{character.status}</span>
+      </p>
+      <p>
+        <span className="titleDetail">Specie</span>
+        <span className="textDetail">{character.species}</span>
+      </p>
+      {character.type !== "" && (
+        <p>
+          <span className="titleDetail">Type</span>
+          <span className="textDetail">{character.type}</span>
+        </p>
+      )}
       <button onClick={() => history.goBack()}>Back</button>
     </div>
   );
